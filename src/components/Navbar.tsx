@@ -22,7 +22,6 @@ const Navbar = () => {
   const navItems = [
     { name: 'Courses', href: '/courses' },
     { name: 'Our Method', href: '/method' },
-    { name: 'Testimonials', href: '/#testimonials' },
     { name: 'Contact', href: '/#contact' },
   ];
 
