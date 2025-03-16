@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
@@ -49,12 +50,16 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button size="lg" className="group">
-                Explore Courses
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <Button size="lg" className="group" asChild>
+                <Link to="/courses">
+                  Explore Courses
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline">
-                Learn Our Approach
+              <Button size="lg" variant="outline" asChild>
+                <Link to="/method">
+                  Learn Our Approach
+                </Link>
               </Button>
             </motion.div>
           </div>

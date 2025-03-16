@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight, Clock, Users } from 'lucide-react';
@@ -13,6 +14,7 @@ interface CourseCardProps {
   imageSrc: string;
   popular?: boolean;
   index: number;
+  id?: string;
 }
 
 const CourseCard = ({
@@ -24,7 +26,11 @@ const CourseCard = ({
   imageSrc,
   popular = false,
   index,
+  id,
 }: CourseCardProps) => {
+  // Generate an ID from the title if not provided
+  const courseId = id || title.toLowerCase().replace(/\s+/g, '-');
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -71,9 +77,11 @@ const CourseCard = ({
           {description}
         </p>
         
-        <Button variant="outline" className="w-full group">
-          View Course
-          <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+        <Button variant="outline" className="w-full group" asChild>
+          <Link to={`/courses/${courseId}`}>
+            View Course
+            <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+          </Link>
         </Button>
       </div>
     </motion.div>

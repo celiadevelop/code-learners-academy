@@ -1,20 +1,37 @@
 
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
+import { useToast } from '@/components/ui/use-toast';
+import { useState } from 'react';
 
 const Footer = () => {
+  const { toast } = useToast();
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      toast({
+        title: "Subscription successful!",
+        description: "Thank you for subscribing to our newsletter.",
+      });
+      setEmail('');
+    }
+  };
+
   return (
     <footer className="bg-gray-50 border-t">
       <div className="container-tight py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <a href="#" className="flex items-center space-x-2 mb-6">
+            <Link to="/" className="flex items-center space-x-2 mb-6">
               <span className="font-display text-xl font-bold tracking-tight text-foreground">
                 Tech<span className="text-tech">English</span>
               </span>
-            </a>
+            </Link>
             
             <p className="text-muted-foreground mb-6">
               Specialized English language training for tech professionals, 
@@ -42,11 +59,11 @@ const Footer = () => {
               Courses
             </h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Technical Communication</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Code Review English</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Presentation Skills</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Documentation Writing</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Remote Team Communication</a></li>
+              <li><Link to="/courses/technical-communication" className="text-muted-foreground hover:text-foreground transition-colors">Technical Communication</Link></li>
+              <li><Link to="/courses/code-review-english" className="text-muted-foreground hover:text-foreground transition-colors">Code Review English</Link></li>
+              <li><Link to="/courses/tech-presentation" className="text-muted-foreground hover:text-foreground transition-colors">Presentation Skills</Link></li>
+              <li><Link to="/courses" className="text-muted-foreground hover:text-foreground transition-colors">Documentation Writing</Link></li>
+              <li><Link to="/courses" className="text-muted-foreground hover:text-foreground transition-colors">Remote Team Communication</Link></li>
             </ul>
           </div>
           
@@ -55,11 +72,11 @@ const Footer = () => {
               Company
             </h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Careers</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Blog</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a></li>
+              <li><Link to="/method" className="text-muted-foreground hover:text-foreground transition-colors">About Us</Link></li>
+              <li><Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors">Careers</Link></li>
+              <li><Link to="/#courses" className="text-muted-foreground hover:text-foreground transition-colors">Courses</Link></li>
+              <li><Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
           
@@ -71,13 +88,20 @@ const Footer = () => {
               Subscribe to our newsletter for the latest course updates and tech English tips.
             </p>
             
-            <div className="flex space-x-2">
-              <Input type="email" placeholder="Your email" className="flex-grow" />
-              <Button size="icon">
+            <form onSubmit={handleSubscribe} className="flex space-x-2">
+              <Input 
+                type="email" 
+                placeholder="Your email" 
+                className="flex-grow"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <Button type="submit" size="icon">
                 <ArrowRight className="h-4 w-4" />
                 <span className="sr-only">Subscribe</span>
               </Button>
-            </div>
+            </form>
           </div>
         </div>
         
@@ -93,15 +117,15 @@ const Footer = () => {
           </p>
           
           <div className="flex space-x-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Privacy
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Terms
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Cookies
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

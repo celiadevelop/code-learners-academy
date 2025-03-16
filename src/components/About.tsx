@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Check, ArrowRight } from 'lucide-react';
 
@@ -91,9 +92,11 @@ const About = () => {
               </div>
             </div>
             
-            <Button className="group">
-              Learn More About Our Method
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Button className="group" asChild>
+              <Link to="/method">
+                Learn More About Our Method
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </motion.div>
         </div>

@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -19,10 +20,10 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Courses', href: '#courses' },
-    { name: 'Approach', href: '#about' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Courses', href: '/courses' },
+    { name: 'Our Method', href: '/method' },
+    { name: 'Testimonials', href: '/#testimonials' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (
@@ -36,24 +37,26 @@ const Navbar = () => {
       )}
     >
       <div className="container-tight flex items-center justify-between">
-        <a href="#" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2">
           <span className="font-display text-xl font-bold tracking-tight text-foreground">
             Tech<span className="text-tech">English</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
-          <Button>Enroll Now</Button>
+          <Button asChild>
+            <Link to="/enroll">Enroll Now</Link>
+          </Button>
         </nav>
 
         {/* Mobile menu button */}
@@ -81,16 +84,20 @@ const Navbar = () => {
         >
           <div className="container-tight py-4 flex flex-col space-y-4">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-base font-medium text-foreground py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <Button className="w-full">Enroll Now</Button>
+            <Button asChild className="w-full">
+              <Link to="/enroll" onClick={() => setIsMobileMenuOpen(false)}>
+                Enroll Now
+              </Link>
+            </Button>
           </div>
         </motion.div>
       )}

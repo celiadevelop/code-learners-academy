@@ -1,6 +1,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -22,6 +23,7 @@ const Index = () => {
   
   const courses = [
     {
+      id: "technical-communication",
       title: "Technical Communication Fundamentals",
       description: "Master the essentials of clear technical communication for developers and engineers working in international teams.",
       level: "Beginner",
@@ -31,6 +33,7 @@ const Index = () => {
       popular: true
     },
     {
+      id: "code-review-english",
       title: "Code Review English Mastery",
       description: "Learn specific vocabulary and communication patterns for effective code reviews and technical discussions.",
       level: "Intermediate",
@@ -39,6 +42,7 @@ const Index = () => {
       imageSrc: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     },
     {
+      id: "tech-presentation",
       title: "Tech Presentation Skills",
       description: "Develop confidence in presenting technical concepts, products, and project updates in English.",
       level: "Intermediate",
@@ -104,6 +108,7 @@ const Index = () => {
               <CourseCard
                 key={index}
                 index={index}
+                id={course.id}
                 title={course.title}
                 description={course.description}
                 level={course.level}
@@ -122,9 +127,11 @@ const Index = () => {
             transition={{ duration: 0.6 }}
             className="mt-12 text-center"
           >
-            <Button variant="outline" className="group">
-              View All Courses
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Button variant="outline" className="group" asChild>
+              <Link to="/courses">
+                View All Courses
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </motion.div>
         </div>
