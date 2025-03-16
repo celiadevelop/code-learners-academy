@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -117,9 +118,11 @@ const OurMethod = () => {
                     </div>
                   </div>
                   
-                  <Button className="group">
-                    View Course Catalog
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <Button className="group" asChild>
+                    <Link to="/courses">
+                      View Course Catalog
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                 </motion.div>
                 
@@ -154,9 +157,11 @@ const OurMethod = () => {
                 Join thousands of tech professionals who have accelerated their careers 
                 through improved technical English skills.
               </p>
-              <Button size="lg" className="group">
-                Enroll Now
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <Button size="lg" className="group" asChild>
+                <Link to="/enroll">
+                  Enroll Now
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </motion.div>
           </div>

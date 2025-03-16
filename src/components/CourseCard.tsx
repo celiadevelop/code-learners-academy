@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
@@ -78,7 +79,7 @@ const CourseCard = ({
         
         <Button variant="outline" className="w-full group" asChild>
           <Link to={`/courses/${courseId}`}>
-            View Course
+            Enroll in this Course
             <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </Link>
         </Button>

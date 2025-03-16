@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -5,6 +6,7 @@ import CourseCard from '@/components/CourseCard';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { Link } from 'react-router-dom';
 
 const AllCourses = () => {
   const courses = [
@@ -127,9 +129,11 @@ const AllCourses = () => {
                 We can create custom programs for your technical team.
                 Contact us to discuss your specific language training needs.
               </p>
-              <Button variant="outline" className="group">
-                Contact for Custom Training
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <Button variant="outline" className="group" asChild>
+                <Link to="/#contact">
+                  Contact for Custom Training
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </motion.div>
           </div>

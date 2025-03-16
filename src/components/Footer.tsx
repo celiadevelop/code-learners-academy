@@ -62,8 +62,8 @@ const Footer = () => {
               <li><Link to="/courses/technical-communication" className="text-muted-foreground hover:text-foreground transition-colors">Technical Communication</Link></li>
               <li><Link to="/courses/code-review-english" className="text-muted-foreground hover:text-foreground transition-colors">Code Review English</Link></li>
               <li><Link to="/courses/tech-presentation" className="text-muted-foreground hover:text-foreground transition-colors">Presentation Skills</Link></li>
-              <li><Link to="/courses" className="text-muted-foreground hover:text-foreground transition-colors">Documentation Writing</Link></li>
-              <li><Link to="/courses" className="text-muted-foreground hover:text-foreground transition-colors">Remote Team Communication</Link></li>
+              <li><Link to="/courses/documentation-writing" className="text-muted-foreground hover:text-foreground transition-colors">Documentation Writing</Link></li>
+              <li><Link to="/courses/remote-team-communication" className="text-muted-foreground hover:text-foreground transition-colors">Remote Team Communication</Link></li>
             </ul>
           </div>
           
@@ -73,10 +73,10 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li><Link to="/method" className="text-muted-foreground hover:text-foreground transition-colors">About Us</Link></li>
-              <li><Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors">Careers</Link></li>
-              <li><Link to="/#courses" className="text-muted-foreground hover:text-foreground transition-colors">Courses</Link></li>
-              <li><Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link></li>
+              <li><Link to="/enroll" className="text-muted-foreground hover:text-foreground transition-colors">Careers</Link></li>
+              <li><Link to="/courses" className="text-muted-foreground hover:text-foreground transition-colors">Courses</Link></li>
+              <li><Link to="/enroll" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/enroll" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
           
@@ -117,13 +117,13 @@ const Footer = () => {
           </p>
           
           <div className="flex space-x-6">
-            <Link to="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/enroll" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Privacy
             </Link>
-            <Link to="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/enroll" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Terms
             </Link>
-            <Link to="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/enroll" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Cookies
             </Link>
           </div>
