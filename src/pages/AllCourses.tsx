@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -10,6 +9,7 @@ import { Input } from '@/components/ui/input';
 const AllCourses = () => {
   const courses = [
     {
+      id: "technical-communication",
       title: "Technical Communication Fundamentals",
       description: "Master the essentials of clear technical communication for developers and engineers working in international teams.",
       level: "Beginner",
@@ -19,6 +19,7 @@ const AllCourses = () => {
       popular: true
     },
     {
+      id: "code-review-english",
       title: "Code Review English Mastery",
       description: "Learn specific vocabulary and communication patterns for effective code reviews and technical discussions.",
       level: "Intermediate",
@@ -27,6 +28,7 @@ const AllCourses = () => {
       imageSrc: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     },
     {
+      id: "tech-presentation",
       title: "Tech Presentation Skills",
       description: "Develop confidence in presenting technical concepts, products, and project updates in English.",
       level: "Intermediate",
@@ -35,6 +37,7 @@ const AllCourses = () => {
       imageSrc: "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     },
     {
+      id: "documentation-writing",
       title: "Documentation Writing",
       description: "Learn how to write clear, comprehensive technical documentation that's accessible to both technical and non-technical audiences.",
       level: "All Levels",
@@ -43,6 +46,7 @@ const AllCourses = () => {
       imageSrc: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     },
     {
+      id: "remote-team-communication",
       title: "Remote Team Communication",
       description: "Optimize your communication in distributed tech teams with specific strategies for async collaboration and virtual meetings.",
       level: "Intermediate",
@@ -52,6 +56,7 @@ const AllCourses = () => {
       popular: true
     },
     {
+      id: "interview-english",
       title: "Interview English for Tech Roles",
       description: "Prepare for technical interviews in English with specialized vocabulary, common questions, and practice sessions.",
       level: "All Levels",
@@ -97,6 +102,7 @@ const AllCourses = () => {
                 <CourseCard
                   key={index}
                   index={index}
+                  id={course.id}
                   title={course.title}
                   description={course.description}
                   level={course.level}

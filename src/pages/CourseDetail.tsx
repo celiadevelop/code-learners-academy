@@ -196,6 +196,154 @@ const courses: Record<string, CourseData> = {
       "Handle technical questions effectively",
       "Adapt presentations for different technical audiences"
     ]
+  },
+  "documentation-writing": {
+    id: "documentation-writing",
+    title: "Documentation Writing",
+    description: "Learn how to write clear, comprehensive technical documentation that's accessible to both technical and non-technical audiences.",
+    longDescription: "This specialized course teaches you how to create documentation that helps users understand and utilize technical products effectively. You'll learn techniques for organizing information, writing clear instructions, and creating different types of documentation for various audiences.",
+    level: "All Levels",
+    duration: "5 weeks",
+    students: 192,
+    imageSrc: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    instructor: {
+      name: "David Mercer",
+      role: "Technical Documentation Specialist",
+      bio: "With over a decade of experience writing documentation for major tech companies, David specializes in making complex technical information accessible to diverse audiences.",
+      imageSrc: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    },
+    modules: [
+      {
+        title: "Documentation Fundamentals",
+        duration: "1 week",
+        description: "Understanding different types of technical documentation and their purposes.",
+        topics: ["Documentation types and audiences", "Information architecture", "Style guides for documentation"]
+      },
+      {
+        title: "API Documentation",
+        duration: "1 week",
+        description: "Creating clear, usable documentation for APIs.",
+        topics: ["Endpoint documentation", "Request/response examples", "Authentication descriptions"]
+      },
+      {
+        title: "User Guides and Tutorials",
+        duration: "1 week",
+        description: "Writing step-by-step instructions that users can follow easily.",
+        topics: ["Progressive disclosure", "Visual aids in documentation", "User-centered instructions"]
+      },
+      {
+        title: "Documentation Tools and Formats",
+        duration: "1 week",
+        description: "Using modern documentation tools and formats effectively.",
+        topics: ["Markdown and documentation-as-code", "Interactive documentation", "Documentation platforms"]
+      },
+      {
+        title: "Documentation Project",
+        duration: "1 week",
+        description: "Apply your skills by creating documentation for a real technical product.",
+        topics: ["Planning documentation structure", "Writing and testing documentation", "Gathering and incorporating feedback"]
+      }
+    ],
+    outcomes: [
+      "Create clear, well-organized technical documentation",
+      "Write effective API documentation that developers can use easily",
+      "Develop user-friendly guides and tutorials",
+      "Use modern documentation tools and formats",
+      "Adapt your writing style for different technical audiences"
+    ]
+  },
+  "remote-team-communication": {
+    id: "remote-team-communication",
+    title: "Remote Team Communication",
+    description: "Optimize your communication in distributed tech teams with specific strategies for async collaboration and virtual meetings.",
+    longDescription: "This practical course focuses on the unique challenges of communicating in distributed technical teams. You'll learn how to communicate effectively across time zones, cultures, and digital platforms, with specific techniques for asynchronous collaboration and making the most of virtual meetings.",
+    level: "Intermediate",
+    duration: "4 weeks",
+    students: 218,
+    imageSrc: "https://images.unsplash.com/photo-1560439514-4e9645039924?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    popular: true,
+    instructor: {
+      name: "Maya Patel",
+      role: "Remote Work Communication Specialist",
+      bio: "Former Engineering Manager at GitLab with extensive experience leading fully-distributed technical teams. Maya helps tech professionals optimize their remote communication skills.",
+      imageSrc: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80"
+    },
+    modules: [
+      {
+        title: "Asynchronous Communication",
+        duration: "1 week",
+        description: "Master techniques for clear, effective async communication.",
+        topics: ["Written communication clarity", "Documentation-first approach", "Status updates and visibility"]
+      },
+      {
+        title: "Virtual Meeting Skills",
+        duration: "1 week",
+        description: "Make the most of synchronous communication in distributed teams.",
+        topics: ["Meeting facilitation", "Virtual presentation skills", "Inclusive meeting practices"]
+      },
+      {
+        title: "Cross-Cultural Communication",
+        duration: "1 week",
+        description: "Navigate cultural differences in global technical teams.",
+        topics: ["Cultural communication patterns", "Building trust across cultures", "Adapting communication styles"]
+      },
+      {
+        title: "Remote Collaboration Tools",
+        duration: "1 week",
+        description: "Effectively use tools to enhance remote team communication.",
+        topics: ["Collaboration platforms", "Visual communication tools", "Documentation and knowledge sharing"]
+      }
+    ],
+    outcomes: [
+      "Communicate clearly and effectively in asynchronous channels",
+      "Run productive, inclusive virtual meetings",
+      "Navigate cultural differences in global tech teams",
+      "Use collaboration tools to enhance team communication",
+      "Build trust and relationships in distributed teams"
+    ]
+  },
+  "interview-english": {
+    id: "interview-english",
+    title: "Interview English for Tech Roles",
+    description: "Prepare for technical interviews in English with specialized vocabulary, common questions, and practice sessions.",
+    longDescription: "This focused course helps you prepare specifically for technical interviews conducted in English. You'll learn how to talk about your experience and skills, explain technical concepts clearly, and navigate behavioral questions with confidence—all with the specialized vocabulary needed for technical roles.",
+    level: "All Levels",
+    duration: "3 weeks",
+    students: 312,
+    imageSrc: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    instructor: {
+      name: "James Wilson",
+      role: "Tech Recruitment Language Coach",
+      bio: "Former technical recruiter with experience hiring for major tech companies. James helps non-native English speakers navigate the technical interview process successfully.",
+      imageSrc: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    },
+    modules: [
+      {
+        title: "Resume and Introduction Language",
+        duration: "1 week",
+        description: "Polish your self-introduction and learn to talk about your experience.",
+        topics: ["Professional self-introduction", "Talking about your background", "Describing projects and achievements"]
+      },
+      {
+        title: "Technical Discussion Skills",
+        duration: "1 week",
+        description: "Master the language needed for technical interview components.",
+        topics: ["Explaining technical concepts", "Describing your problem-solving approach", "Whiteboard interview language"]
+      },
+      {
+        title: "Behavioral Interview Preparation",
+        duration: "1 week",
+        description: "Prepare for behavioral questions common in tech interviews.",
+        topics: ["STAR method responses", "Talking about challenges and conflicts", "Discussing career goals"]
+      }
+    ],
+    outcomes: [
+      "Introduce yourself professionally in interview settings",
+      "Explain technical concepts clearly during interviews",
+      "Navigate behavioral interview questions confidently",
+      "Discuss your experience and projects effectively",
+      "Ask intelligent questions to your interviewer"
+    ]
   }
 };
 
